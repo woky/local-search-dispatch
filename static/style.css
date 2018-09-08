@@ -1,0 +1,14 @@
+.template_list {
+	display: flex;
+	flex-flow: column;
+}
+
+.template_list > *:not(:first-child) {
+	margin-top: 5px;
+}
+
+.template_entry {
+	padding: 5px;
+	border: 1px solid;
+}
+

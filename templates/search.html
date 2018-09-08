@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Search for {{ g.query }}</title>
+<link rel=stylesheet href="{{ url_for('static', filename='style.css') }}">
+<div class=template_list>
+	{% for tpl in g.templates %}
+	{% set url = tpl.url_template.replace('%s', g.query_quoted) %}
+	<div class=template_entry>
+		<div>{{ tpl.name }}</div>
+		<div><a href="{{ url }}">{{ url }}</a></div>
+	</div>
+	{% endfor %}
+</div>
